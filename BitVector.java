@@ -25,20 +25,11 @@ public class BitVector {
         }
         if(index == 1) {
             arr[temp] = arr[0] ^ 1;
-//            System.out.println(arr[temp]);
             return;
         }
         this.temp = index / 32;
         arr[temp] = arr[temp] ^ ( int )Math.pow(2, (index - 1) % 32 );
-//        System.out.println(arr[temp]);
     }
-//    public void showArr(){
-//        for (int j : arr) {
-//            System.out.print(j + " ");
-//        }
-//        System.out.println();
-//        System.out.println(ArrIndex);
-//    }
     public void reset(int index){
         if(!ArrIndex.contains(index)) {
             throw new IllegalArgumentException("Cant Reset two same Elements");
